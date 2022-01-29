@@ -4,21 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <script>
-
-        //JavaScript code is written in this "script" block
-
-        console.log("test"); // view this test in your developer tools console tab
-        var abc = "abc";
-console.log(abc.length);
-// → 3
-    </script>
-
+    <title>Javascript Loop Exercises
+    </title>
 
 </head>
 <body>
     
+    <script type="text/javascript">
+
+/*Looping a triangle A.)Write a loop that makes seven calls to console.log to output the following triangle:  */
+ 
+for (var result = "#"; 
+result.length <=7;
+result = result + "#")
+console.log(result);
+
+/* Art3mis & Parzival A.) Write a program that uses “console.log” to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Art3mis" instead of the number, and for numbers divisible by 5 (and not 3), print "Parzival" instead.*/
+
+for ( var number = 1;
+number < 101; number ++ ){
+// the % means dividing so the var is beiung divided by 3 and 5
+    var divisiblebythree = number % 3;
+var divisiblebyfive = number % 5;
+// if the answer of the number being divided is true/ boolean it will print out the world of ur needs   
+if ( divisiblebythree == 0) 
+console.log( "Art3mis");
+else if (divisiblebyfive == 0)
+console.log( "Parzival");
+// and every if ststament can only hav eon else so its used after the else if statements
+else
+console.log( number );
+}
+
+/* Art3mis & Parzival B.) When you have that working, modify your program to print "Art3mis & Parzival", for numbers that are divisible by both 3 and 5 (and still print "Art3mis" or "Parzival" for numbers divisible by only one of those).*/
+for ( var number = 1;
+number < 101; number ++ ){
+var divisiblebythree = number % 3;
+var divisiblebyfive = number % 5;
+/* very similar to the part A but && mean and so ur just add another part to the if statement */
+if ( (divisiblebythree == 0) && (divisiblebyfive == 0) ) 
+console.log( "Art3mis & Parzival");
+else if (divisiblebythree == 0)
+console.log( "Parzival");
+else if (divisiblebyfive == 0)
+console.log( "Parzival");
+else
+console.log( number );
+}
+/*Chess board A.)Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+ */
+// make a space
+var space = " ";
+// make two loops so the outside  is for the height and the inner one is for the lenght
+for (h= 1; h<= 8; h++) {
+    //h = height w= width
+     for(w=1; w<=8; w++) {
+         //the h and the w are then beeing divided by 2 and the space is ether equal to " " or "#"
+         ((h+w)%2==0 ? space+= " " : space+="#")
+     }
+     // this is a way to make the code go down to the next line without this the code would just be a long line of # # # # # # # # #
+     space += "\n"
+}
+console.log (space)
+</script>
 </body>
 </html>
+
+/* */
+/* */
+/* */
+/* */
